@@ -12,6 +12,7 @@ public class Main {
 
         //initialize Game
         myGame.initialize();
+        myGame.gameStatus();
 
         //run game until return is true: game finsihed or user wants to abort
         while (!myGame.nextMove()) {
