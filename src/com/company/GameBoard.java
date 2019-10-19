@@ -5,4 +5,5 @@ public interface GameBoard {
     String getStatusSquares();
     String getStatusPlayers();
     void putPiece(String adr, Piece thePiece);
+    boolean isPlayerChessMate();
 }

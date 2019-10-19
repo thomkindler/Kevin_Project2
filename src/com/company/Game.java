@@ -5,6 +5,7 @@ public interface Game {
     boolean nextMove();
     void gameStatus();
     void finalGameStatus();
+    boolean quit();
 }
 
 

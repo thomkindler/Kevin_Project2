@@ -51,4 +51,10 @@ public class GameBoardImpl implements GameBoard {
     public void putPiece(String adr, Piece thePiece) {
         mySquares.get(adr).putPieceHeld(thePiece);
     }
+
+    @Override
+    public boolean isPlayerChessMate() {
+        return false;
+    }
+
 }

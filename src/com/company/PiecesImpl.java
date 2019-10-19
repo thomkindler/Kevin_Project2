@@ -46,11 +46,45 @@ enum Piece {
 
 }
 
+
 public class PiecesImpl implements Pieces {
     //Map to hold all White Pieces
     Map<String, Piece> whitePieces = new HashMap<String, Piece>();
     //Map to hold all Black Pieces
     Map<String, Piece> blackPieces = new HashMap<String, Piece>();
+    List<Character> listOfFigures = new ArrayList<Character>();
+
+
+    PiecesImpl() {
+        listOfFigures.add('P');
+        listOfFigures.add('T');
+        listOfFigures.add('N');
+        listOfFigures.add('Q');
+        listOfFigures.add('K');
+        listOfFigures.add('B');
+    }
+
+    @Override
+    public boolean moveSyntaxOK(String move) {
+        if (move.isEmpty()) return(false);
+        if (move.length()!=3) return(false);
+
+        char[]  cArray = move.toCharArray();
+        if ( ! listOfFigures.contains(cArray[0]))
+            return (false) ;
+        if ( (cArray[1] < 'a') || (cArray[1] >'h') )
+            return (false) ;
+        if ( (cArray[2] < '0') || (cArray[2] >'8') )
+            return (false) ;
+
+        return true;
+    }
+
+    @Override
+    public boolean makeMove(String move, String color) {
+
+        return true;
+    }
 
 
     @Override
